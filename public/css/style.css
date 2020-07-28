@@ -1,0 +1,138 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-image: url('/images/todo.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    margin-top: 30px;
+    text-align: center;
+    width: 35%;
+    height: 70%;
+}
+
+h2 {
+    background-color: #5EAF58;
+    padding: 10px;
+    box-shadow: 2px 0px 6px 0px rgb(156, 159, 160);
+    margin-bottom: 40px;
+    color: white;
+}
+
+form {
+    padding: 0;
+    margin: 0;
+    text-align: start;
+    box-shadow: 2px 0px 6px 0px rgb(156, 159, 160);
+    position: relative;
+}
+
+label {
+    padding: 20px;
+    border-bottom: 1px solid lightgray;
+    width: 100%;
+    margin: 0;
+    background-color: white;
+    font-size: 1.2rem;
+}
+
+
+.addtodo {
+    display: flex;
+    padding: 10px;
+    background-color: white;
+}
+
+span {
+    display: inline-block;
+    margin-left: 13px;
+    z-index: 5;
+}
+
+input[type=text] {
+    width: 80%;
+    text-align: center;
+    border: none;
+    outline: 1px;
+}
+
+input[type=text]:focus {
+    border-bottom: 3px solid #5EAF58;
+}
+
+
+.floating-button {
+    background-color: #5EAF58;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    padding: 15px 20px;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.fa-plus {
+    color: white;
+}
+
+.floating-button:hover {
+    cursor: pointer;
+    box-shadow: 2px 0px 6px 0px rgb(156, 159, 160);
+}
+
+button {
+    border: none;
+}
+
+input[type=checkbox]:checked+span {
+    text-decoration: line-through;
+}
+
+/* Media Queries */
+
+@media (max-width: 750px) {
+    .container {
+        margin-top: 30px;
+        text-align: center;
+        width: 90%;
+        height: 70%;
+    }
+}
+
+@media (min-width: 751px) {
+    .container {
+        margin-top: 30px;
+        text-align: center;
+        width: 65%;
+        height: 70%;
+    }
+}
+
+@media (min-width: 980px) {
+    .container {
+        margin-top: 30px;
+        text-align: center;
+        width: 55%;
+        height: 70%;
+    }
+}
+
+@media (min-width: 1150px) {
+    .container {
+        margin-top: 30px;
+        text-align: center;
+        width: 45%;
+        height: 70%;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        margin-top: 30px;
+        text-align: center;
+        width: 35%;
+        height: 70%;
+    }
+}
