@@ -58,4 +58,16 @@ app.post('/', (req, res) => {
     })
 })
 
+app.post('/delete', (req, res) => {
+    Task.deleteOne({_id: req.body.checkbox}, (err) => {
+        if (err) {
+            console.log(err);
+        } else {
+            console.log('Seccessfully deleted task')
+            res.redirect('/')
+        }
+    })
+})
+
+
 app.listen(3000, () => console.log('Server is running on port 3000'))

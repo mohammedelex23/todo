@@ -21,11 +21,15 @@ h2 {
     color: white;
 }
 
+.box {
+    box-shadow: 2px 0px 6px 0px rgb(156, 159, 160);
+    background-color: white;
+}
+
 form {
     padding: 0;
     margin: 0;
     text-align: start;
-    box-shadow: 2px 0px 6px 0px rgb(156, 159, 160);
     position: relative;
 }
 

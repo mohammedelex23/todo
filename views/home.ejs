@@ -19,17 +19,20 @@
 <body>
     <div class="container">
         <h2><%= date %></h2>
-        <form action="/" method="POST">
-            <%=  %>
+        <div class="box">
             <% list.forEach((task) => { %>
-            <label for=""><input type="checkbox"> <span><%= task.name %></span></label>
+            <form action="/delete" method="post">
+                <label for=""><input name="checkbox" value="<%= task._id %>" onchange="this.form.submit()" type="checkbox"> <span><%= task.name %></span></label>
+            </form>
             <% }) %>
 
-            <div class="addtodo">
-                <input required name="task" type="text" placeholder="New item">
-                <button type="submit" class="floating-button"><i class="fa fa-plus circle-icon"></i></button>
-            </div>
-        </form>
+            <form action="/" method="POST">
+                <div class="addtodo">
+                    <input required name="task" type="text" placeholder="New item">
+                    <button type="submit" class="floating-button"><i class="fa fa-plus circle-icon"></i></button>
+                </div>
+            </form>
+        </div>
     </div>
 
     <!-- Optional JavaScript -->
