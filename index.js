@@ -8,7 +8,9 @@ app.set('view engine', 'ejs')
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({extended: true}))
 
-mongoose.connect('mongodb://localhost:27017/todoListDB', {useUnifiedTopology: true, useNewUrlParser: true}, (err) => {
+const url = 'mongodb+srv://user:mohammed7te@cluster0-xrk9e.mongodb.net/todoList?retryWrites=true&w=majority'
+
+mongoose.connect(url , {useUnifiedTopology: true, useNewUrlParser: true}, (err) => {
     err ? console.log(err) : console.log('Seccessfully conected to mongoDB');
 })
 
@@ -69,5 +71,10 @@ app.post('/delete', (req, res) => {
     })
 })
 
+var port = process.env.PORT;
 
-app.listen(3000, () => console.log('Server is running on port 3000'))
+if (port == null || port == "") {
+    port = 3000
+}
+
+app.listen(port, () => console.log('Server is running'))
